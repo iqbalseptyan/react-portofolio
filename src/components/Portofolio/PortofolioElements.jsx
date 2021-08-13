@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link as LinkR } from "react-router-dom";
 
 export const PortofolioContainer = styled.div`
   display: flex;
@@ -28,14 +29,16 @@ export const PortofolioWrapper = styled.div`
   }
 `;
 
-export const PortofolioCard = styled.div`
-  background: #fff;
-  border-radius: 10px;
+export const PortofolioCard = styled(LinkR)`
+  /* background: #fff; */
+  height: auto;
+  /* border-radius: 10px; */
 `;
 
 export const CardImg = styled.img`
-  height: 200px;
+  height: 100%;
   width: 100%;
+  border-radius: 10px;
 `;
 
 export const CardHeadLine = styled.h1`

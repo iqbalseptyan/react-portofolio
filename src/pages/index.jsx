@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import About from "../components/About/About";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../components/Navbar/Navbar";
@@ -18,7 +17,7 @@ const Home = () => {
     maxHeight: "700px",
   };
   return (
-    <Router>
+    <>
       <Navbar />
       <Particles
         style={particleStyle}
@@ -100,7 +99,7 @@ const Home = () => {
       <Info />
       <Contact />
       <Footer />
-    </Router>
+    </>
   );
 };
 

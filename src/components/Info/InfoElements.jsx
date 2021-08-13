@@ -34,6 +34,7 @@ export const Title = styled.h1`
   text-align: left;
   text-transform: capitalize;
   font-size: 64px;
+  color: var(--second-color);
   @media screen and (max-width: 768px) {
     font-size: 48px;
   }
@@ -44,7 +45,6 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.p`
   text-align: left;
-  text-transform: capitalize;
   font-size: 32px;
   @media screen and (max-width: 768px) {
     font-size: 24px;

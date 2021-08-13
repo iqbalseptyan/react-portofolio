@@ -8,9 +8,14 @@ export const Container = styled.div`
   background: ${({ lightBg }) => (lightBg ? "#fff" : "#334257")};
   @media screen and (max-width: 1366px) {
     transition: 0.5s all ease;
-    display: flex;
     width: 100%;
     height: 800px;
     background: ${({ lightBg }) => (lightBg ? "#fff" : "#334257")};
+  }
+  @media screen and (max-width: 768px) {
+    height: 1000px;
+  }
+  @media screen and (max-width: 420px) {
+    /* display: block; */
   }
 `;

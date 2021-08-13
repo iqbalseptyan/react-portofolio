@@ -1,12 +1,22 @@
-import { BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
+import PageNotFound from "./components/404/404";
 import Home from "./pages";
+import DetailPage from "./pages/detail";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
-      <Home />
-    </Router>
+    <Switch>
+      <Route exact path="/" basename={process.env.PUBLIC_URL}>
+        <Home />
+      </Route>
+      <Route exact path="/detail">
+        <DetailPage />
+      </Route>
+      <Route path="*">
+        <PageNotFound />
+      </Route>
+    </Switch>
   );
 }
 

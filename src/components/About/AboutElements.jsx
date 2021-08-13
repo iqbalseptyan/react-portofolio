@@ -34,6 +34,7 @@ export const AboutImg = styled.img`
 `;
 
 export const Title = styled.h1`
+  color: var(--second-color);
   text-align: justify;
   text-transform: capitalize;
   font-size: 64px;

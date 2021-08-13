@@ -5,9 +5,8 @@ export const ContactRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   grid-gap: 20px;
-  /* justify-content: space-around; */
-  margin: auto;
   align-items: center;
+  text-align: center;
   grid-template-areas: ${({ imgStart }) =>
     imgStart ? `'col2 col1'` : `'col1 col2' `};
   @media screen and (max-width: 768px) {
@@ -18,7 +17,7 @@ export const ContactRow = styled.div`
 
 export const Column1 = styled.div`
   grid-area: col1;
-  margin: auto;
+  margin: auto; ;
 `;
 
 export const Column2 = styled.div`
@@ -41,6 +40,7 @@ export const Title = styled.h1`
     font-size: 32px;
   }
   text-transform: capitalize;
+  color: var(--second-color);
 `;
 
 export const Subtitle = styled.p`

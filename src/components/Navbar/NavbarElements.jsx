@@ -2,11 +2,11 @@ import styled from "styled-components";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
+  display: flex;
   position: sticky;
-  background: #334257;
+  background: var(--first-color);
   height: 80px;
   top: 0;
-  display: flex;
   z-index: 1000000;
   list-style: none;
   align-items: center;
@@ -35,28 +35,24 @@ export const NavLogo = styled(LinkS)`
 export const NavMobileIcon = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
+    display: flex;
     color: #fff;
     cursor: pointer;
     display: block;
     font-size: 1.8rem;
     position: absolute;
     right: 24px;
-    animation: ${({ isOpen }) => (isOpen ? "mymove 2s infinite" : "none")};
-    @keyframes mymove {
-      0% {
-        transform: rotate(360deg);
-      }
-    }
   }
 `;
 
 export const NavMenu = styled.ul`
   list-style: none;
   justify-content: space-around;
-  width: 40%;
+  width: 50%;
   display: flex;
   transition-timing-function: ease-in-out;
   @media screen and (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     position: absolute;
     left: 0;
     top: 80px;
@@ -65,14 +61,20 @@ export const NavMenu = styled.ul`
     height: 100vh;
     justify-content: space-evenly;
     flex-direction: column;
+    flex: 50%;
     background-color: #000;
     opacity: 0.7;
-    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    vertical-align: middle;
+    overflow: hidden;
   }
 `;
 
 export const NavItem = styled.li`
   height: 80px;
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: center;
+  }
 `;
 
 export const NavLinks = styled(LinkS)`
@@ -86,7 +88,8 @@ export const NavLinks = styled(LinkS)`
   text-decoration: none;
   height: 100%;
   &.active {
-    border-bottom: 3px solid #28ffbf;
-    color: #28ffbf;
+    border-bottom: 5px solid var(--second-color);
+    color: var(--second-color);
+    border-radius: 15px;
   }
 `;

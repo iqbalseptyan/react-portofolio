@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Nav,
   NavContainer,
@@ -12,20 +12,20 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
-  // const [scrollNav, setScrollNav] = useState(false);
+  const [scrollNav, setScrollNav] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // const changeNav = () => {
-  //   if (window.scrollY >= 80) {
-  //     setScrollNav(true);
-  //   } else {
-  //     setScrollNav(false);
-  //   }
-  // };
+  const changeNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", changeNav);
-  // }, []);
+  useEffect(() => {
+    window.addEventListener("scroll", changeNav);
+  }, []);
 
   const burger = () => {
     setIsOpen(!isOpen);
@@ -36,7 +36,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <Nav>
+      <Nav scrollNav={scrollNav}>
         <NavContainer>
           <NavLogo to="/" onClick={toggleHome}>
             Iqbal Septyan

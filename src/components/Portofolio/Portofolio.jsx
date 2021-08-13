@@ -11,7 +11,6 @@ import {
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import img from "../../images/iqbalseptyan.svg";
 import { Container } from "../ContainerElements";
 
 const responsive = {
@@ -59,8 +58,11 @@ const Portofolio = (props) => {
             swipeable
           >
             <PortofolioWrapper>
-              <PortofolioCard>
-                <CardImg src={img} alt="Avatar" />
+              <PortofolioCard to="/detail">
+                <CardImg
+                  src="https://picsum.photos/300/200"
+                  alt="Portofolio Image"
+                />
               </PortofolioCard>
               <CardHeadLine>Lorem Ipsum.</CardHeadLine>
               <CardDescription>
@@ -69,8 +71,11 @@ const Portofolio = (props) => {
               </CardDescription>
             </PortofolioWrapper>
             <PortofolioWrapper>
-              <PortofolioCard>
-                <CardImg src={img} alt="Avatar" />
+              <PortofolioCard to="/detail">
+                <CardImg
+                  src="https://picsum.photos/300/200"
+                  alt="Portofolio Image"
+                />
               </PortofolioCard>
               <CardHeadLine>Lorem Ipsum.</CardHeadLine>
               <CardDescription>
@@ -79,8 +84,11 @@ const Portofolio = (props) => {
               </CardDescription>
             </PortofolioWrapper>
             <PortofolioWrapper>
-              <PortofolioCard>
-                <CardImg src={img} alt="Avatar" />
+              <PortofolioCard to="/detail">
+                <CardImg
+                  src="https://picsum.photos/300/200"
+                  alt="Portofolio Image"
+                />
               </PortofolioCard>
               <CardHeadLine>Lorem Ipsum.</CardHeadLine>
               <CardDescription>
